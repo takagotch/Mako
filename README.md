@@ -51,7 +51,20 @@ class MockCacheImpl(CacheImpl):
 register_plugin("mock", __name__, "MockCacheImpl")
 ```
 
-```
+```py
+// test/test_call.py
+
+class CallTest(TemplateTest):
+  def test_call(self):
+    t = Template(
+      """
+      """
+    )
+    assert result_lines(t.render()) == [
+      "",
+      "",
+    ]
+
 ```
 
 ```
